@@ -5,7 +5,7 @@ import downArrow from '../assets/downArrow.svg'
 
 function Header() {
 
-  const [Dropdown , setDropdown]= useState(false)
+  const [Dropdown , setDropdown]= useState(false);
   const downArrowActive= () => {
     setDropdown((state)=> !state)
   }
@@ -22,12 +22,13 @@ function Header() {
           '> 
             {/**board.name */}
           </h3>
-          <img
-            src={ Dropdown? downArrow: upArrow}
-            alt='Arrow down'
-            className='w-3 ml-2 md:hidden'
-            onClick={downArrowActive}>
-          </img>
+        
+          <img 
+          src={ Dropdown? downArrow: upArrow}
+          alt='Arrow down'
+          className='w-3 ml-2 md:hidden'
+          onClick={downArrowActive}
+          />
         </div>
 
       </div>
