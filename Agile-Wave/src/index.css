@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    margin: 0;
+    font-family:'Courier New', Courier, monospace;
+}
+
+@layer components{
+    .button{
+        @apply bg-[#5FC7BB] py-2 px-4 rounded-full hover:opacity-70 text-sm
+    }
+}

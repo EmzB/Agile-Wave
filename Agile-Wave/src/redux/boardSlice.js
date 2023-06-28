@@ -6,3 +6,4 @@ const boardSlice= createSlice({
     initialState: data.boards,
     reducers: {/**reducer functions go here */}
 })
+export default boardSlice
