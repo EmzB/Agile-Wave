@@ -1,13 +1,12 @@
 import React from 'react'
-import logo from '../assets/logo.svg' 
-import upArrow from '../assets/upArrow.svg' 
+import logo from '../assets/logo.svg'
 import downArrow from '../assets/downArrow.svg'
-
+import upArrow from '../assets/downArrow.svg'
 function Header() {
-   const [Dropdown , setDropdown]= useState(false)
+   /*const [Dropdown , setDropdown]= useState(false)
    const downArrowActive= () => {
   setDropdown((state)=> !state)
-  }
+  }*/
 
   
   return (
@@ -15,7 +14,7 @@ function Header() {
       <header className='flex justify-between items-center'> 
       {/** To the left to the left */}
       <div className= 'flex items-center bg-white-300 space-x-2 md:space-x-4'>
-        <img src={logo} alt='logo'className='w-10'></img>
+        <img src={downArrow} alt='logo'className='w-8'></img>
         <h3 className=' hidden md:4-xl md:inline-block font-bold font-sans'>
           Agile Wave</h3>
         <div className='flex items-center'>
@@ -24,13 +23,7 @@ function Header() {
             {/**board.name */}
           </h3>
           
-          <img 
-          src={ Dropdown? downArrow: upArrow}
-          alt='Arrow down'
-          className='w-3 ml-2 md:hidden'
-          onClick={downArrowActive}
-          />
-        
+          
           
         </div>
 
