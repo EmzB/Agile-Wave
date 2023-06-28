@@ -49,10 +49,9 @@ function Header() {
           className='cursor-pointer'
           />
       </div>
-      {dropDown && <DropdownMenu/>}
-
-
       </header>
+      {dropDown && <DropdownMenu setdropDown={setdropDown}/>}
+
     </div>
   )
 }
