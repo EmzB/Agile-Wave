@@ -1,12 +1,15 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import logo from '../assets/logo.svg'
 import downArrow from '../assets/downArrow.svg'
-import upArrow from '../assets/downArrow.svg'
+import upArrow from '../assets/upArrow.svg'
 function Header() {
-   /*const [Dropdown , setDropdown]= useState(false)
-   const downArrowActive= () => {
-  setDropdown((state)=> !state)
-  }*/
+   const [dropDown , setdropDown]= useState(true)
+   const toggleArrow= ()=>{
+    setdropDown((prevState)=> !prevState)
+   }
+
+   
+  
 
   
   return (
@@ -14,7 +17,7 @@ function Header() {
       <header className='flex justify-between items-center'> 
       {/** To the left to the left */}
       <div className= 'flex items-center bg-white-300 space-x-2 md:space-x-4'>
-        <img src={downArrow} alt='logo'className='w-8'></img>
+        <img src={logo} alt='logo'className='w-8'/>
         <h3 className=' hidden md:4-xl md:inline-block font-bold font-sans'>
           Agile Wave</h3>
         <div className='flex items-center'>
@@ -22,6 +25,13 @@ function Header() {
           '> 
             {/**board.name */}
           </h3>
+          <img
+          src={dropDown? upArrow : downArrow}
+          alt='dropdown'
+          onClick={toggleArrow}
+          className=' w-3 ml-2 md:hidden'
+          />
+          
           
           
           
