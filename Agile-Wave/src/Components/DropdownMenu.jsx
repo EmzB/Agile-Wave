@@ -20,13 +20,16 @@ function DropdownMenu({setdropDown}) {
             <div>
                 {boards.map((board, index)=> (
                      <div key={index}
-                        className='flex py-2 '> 
-                        <img src={boardIcon} className='px-2' /> 
+                        className='flex items-center my-2 '> 
+                        <img src={boardIcon} className='px-2 h-5' /> 
                         <p className='px-2 text-lg'>{board.name}</p>
                         </div>
                 )
                    
                 )}
+            </div>
+            <div className='flex justify-center'>
+                <button className='button text-md bg-pink-300 hover:bg-green-400'> + Create Board</button>
             </div>
 
         </div>
